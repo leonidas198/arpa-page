@@ -7,7 +7,7 @@ import { ABOUT } from "../utils/constants";
 import member1 from "../assets/hero/member1.png";
 import member2 from "../assets/hero/member2.png";
 import member3 from "../assets/hero/member3.png";
-import teamImg from "../assets/team/team.png";
+//import teamImg from "../assets/team/team.png";
 
 type AboutItem = {
   title: string;
@@ -102,7 +102,7 @@ export default function About() {
         </p>
 
         {/* 🧩 Layout */}
-        <div className="grid md:grid-cols-2 gap-10 mb-12">
+        <div className="grid gap-10 mb-12">
 
           {/* 👥 Equipo */}
           <div>
@@ -133,11 +133,11 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <img
+            {/* <img
               src={teamImg}
               alt="Equipo ARPA Software"
               className="rounded-2xl shadow-xl"
-            />
+            /> */}
             <div className="absolute inset-0 bg-blue-500/10 blur-2xl -z-10 rounded-2xl"></div>
           </motion.div>
 
@@ -147,7 +147,7 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid sm:grid-cols-2 gap-6 md:col-span-2"
+            className="grid sm:grid-cols-2 gap-6 "
           >
             {ABOUT.map((item, i) => (
               <AboutCard key={i} item={item} />
